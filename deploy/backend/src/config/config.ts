@@ -21,6 +21,7 @@ const envVars = cleanEnv(
     FRONTEND_URL: str(),
     FRONTEND_HOST: str(),
     FRONTEND_PORT: num(),
+    HASH_SALT: str(),
   },
   {
     reporter: ({ errors }) => {
@@ -60,5 +61,8 @@ export const config = {
     url: envVars.FRONTEND_URL,
     host: envVars.FRONTEND_HOST,
     port: envVars.FRONTEND_PORT,
+  },
+  hash: {
+    salt: envVars.HASH_SALT,
   },
 };

@@ -6,6 +6,6 @@ until $(curl --output /dev/null --silent --head --fail --write-out '%{http_code}
     sleep 1
 done
 
-echo 'Backend service is live. Running nginx...'
+echo 'Backend services is live. Running nginx...'
 
 exec nginx -g 'daemon off;'
