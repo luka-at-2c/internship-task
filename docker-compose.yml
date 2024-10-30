@@ -73,7 +73,7 @@ services:
     volumes:
       - ./deploy/frontend/node_modules:/frontend/node_modules
       - ./deploy/frontend:/frontend
-      - /frontend/.next
+      - ./deploy/frontend/.next:/frontend/.next
     networks:
       - local_net
 
