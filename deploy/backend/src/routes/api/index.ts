@@ -1,6 +1,7 @@
 import express from "express";
 import { Router } from "express-serve-static-core";
 
+import { signInRoute } from "./signin.route";
 import { signUpRoute } from "./signup.route";
 
 export const apiRouter = express.Router();
@@ -9,6 +10,10 @@ const defaultRoutes = [
   {
     path: "/signup",
     route: signUpRoute,
+  },
+  {
+    path: "/signin",
+    route: signInRoute,
   },
 ];
 

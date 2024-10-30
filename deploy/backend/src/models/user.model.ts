@@ -15,6 +15,11 @@ export type CreateUserData = {
   password: string;
 };
 
+export type LogInUser = {
+  email: string;
+  password: string;
+};
+
 export const signUpUserQuery = async (
   user: CreateUserData,
   password: string,
@@ -35,6 +40,16 @@ export const getUserByEmailQuery = async (email: string): Promise<User> => {
   `;
 
   const values = [email];
+
+  return callQuery<User>(selectSQL, values);
+};
+
+export const getUserByIdQuery = async (userId: string): Promise<User> => {
+  const selectSQL = `
+    SELECT * FROM "User" WHERE "id" = $1;
+  `;
+
+  const values = [userId];
 
   return callQuery<User>(selectSQL, values);
 };

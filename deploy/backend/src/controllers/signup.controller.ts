@@ -10,9 +10,9 @@ export const signUpUser = catchAsync(async (req: Request, res: Response) => {
 
   return res.status(httpStatus.CREATED).send({
     success: true,
+    message: "Successfully registered",
     content: {
       email: user.email,
-      message: "Successfully registered",
     },
   });
 });

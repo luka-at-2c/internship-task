@@ -22,6 +22,8 @@ const envVars = cleanEnv(
     FRONTEND_HOST: str(),
     FRONTEND_PORT: num(),
     HASH_SALT: str(),
+    JWT_SECRET: str(),
+    SESSION_SECRET: str(),
   },
   {
     reporter: ({ errors }) => {
@@ -64,5 +66,11 @@ export const config = {
   },
   hash: {
     salt: envVars.HASH_SALT,
+  },
+  jwt: {
+    secret: envVars.JWT_SECRET,
+  },
+  session: {
+    secret: envVars.SESSION_SECRET,
   },
 };
