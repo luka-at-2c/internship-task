@@ -9,16 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.0.1",
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "@hookform/resolvers": "^3.9.1",
+    "axios": "^1.7.7",
     "eslint": "^8",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.2.1"
+    "eslint-plugin-prettier": "^5.2.1",
+    "next": "15.0.1",
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-hook-form": "^7.53.1",
+    "react-toastify": "^10.0.6",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
